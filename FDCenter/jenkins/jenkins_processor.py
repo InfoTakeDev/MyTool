@@ -2,7 +2,6 @@
 import requests
 import sys
 from requests.packages import urllib3
-sys.path.append('/home/bart/workspace/MyTool')
 
 
 RSS_ALL = "https://%s/view/entrypoints/job/%s-ondemand-pipeline-vxrail-build/rssAll"
@@ -16,8 +15,11 @@ def get_url(release_name: str) -> str:
 def prase_to_jenkins_object():
     pass
 
-def parse_jenkins_content():
-    pass    
+def parse_jenkins_content(content: str):
+    pass
+    # parse different build
+    
+        
 
 
 
@@ -49,8 +51,3 @@ def get_jenkins_item_list():
 #     if result.ret_code != 0:
 #         return "Can not find the host %s" % URL, False
 
-
-if __name__ == "__main__":
-    
-    
-    get_jenkins_content("berwick")
