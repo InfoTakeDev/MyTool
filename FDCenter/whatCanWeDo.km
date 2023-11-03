@@ -1,0 +1,129 @@
+{
+    "root": {
+        "data": {
+            "id": "cwnal1exxe00",
+            "created": 1698823255019,
+            "text": "FD information"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cwnamdrvats0",
+                    "created": 1698823360286,
+                    "text": "microservice version Debug",
+                    "layout_mind_offset": {
+                        "x": -86.99999740719818,
+                        "y": -156.99999532103556
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cwnamn0zj8g0",
+                            "created": 1698823380428,
+                            "text": "still PR waiting for merge?"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cwnawcxzclk0",
+                            "created": 1698824142121,
+                            "text": "Result of coBump",
+                            "note": "http://cnshzeus.ccoe.lab.emc.com/history?release=7.0.510"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cwnaz5jzf5s0",
+                                    "created": 1698824361129,
+                                    "text": "for the same slot and version\nhow to define success or fail"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cwnejfhwp400",
+                                    "created": 1698834413384,
+                                    "text": "There is a fake mail"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cwnamv76z4g0",
+                    "created": 1698823398218,
+                    "text": "Find Pendding tasks",
+                    "layout_mind_offset": {
+                        "x": -429.9999871850017,
+                        "y": 82.99999752640736
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cwnan0wmh8g0",
+                            "created": 1698823410640,
+                            "text": "There are pendding PR?",
+                            "layout_right_offset": {
+                                "x": -599.9999821186068,
+                                "y": 225.99999326467548
+                            }
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cwnasltf90g0",
+                    "created": 1698823847979,
+                    "text": "DailyJob",
+                    "layout_mind_offset": {
+                        "x": 92.99999722838416,
+                        "y": -111.99999666214
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cwnasypeleo0",
+                            "created": 1698823876035,
+                            "text": "If there are pendding PR in ",
+                            "note": "https://eos2git.cec.lab.emc.com/vxrail/microservice-release\n"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cwnatvukr5k0",
+                            "created": 1698823948181,
+                            "text": "If daily GI success",
+                            "note": "https://osj-vxr-01-prd.cec.lab.emc.com/view/entrypoints/job/berwick-ondemand-pipeline-vxrail-build/",
+                            "layout_left_offset": {
+                                "x": -21.999999344348907,
+                                "y": -6.9999997913838
+                            }
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cwnayu3ejag0",
+                    "created": 1698824336182,
+                    "text": "The information should be save to database for monitoring"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

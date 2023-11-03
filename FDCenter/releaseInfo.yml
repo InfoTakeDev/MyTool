@@ -1,0 +1,6 @@
+RELEASE_NAME: "Berwick"
+RELEASE_VERSION: "7.0.510"
+VREL_CMD: '/root/workspace/poxio/cmd/vrel/vrel'
+GITHUB_USER: 'bart_hsiao'
+GITHUB_TOKEN: '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'
+JENKINS_TOKE: '1173c0c5d01caa7f3023125a6c6cb741ea'
