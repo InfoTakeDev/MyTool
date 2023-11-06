@@ -8,5 +8,6 @@ from FDCenter.jenkins.testdata import jenkinsXML
 if __name__ == "__main__":
         
     # get_jenkins_content("berwick")
-    
+    print("--------------")
     parse_jenkins_content(jenkinsXML)
+    print("--------------")

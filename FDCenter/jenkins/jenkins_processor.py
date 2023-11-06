@@ -2,10 +2,15 @@
 import requests
 import sys
 from requests.packages import urllib3
+from bs4 import BeautifulSoup
 
+
+
+URL = "osj-vxr-01-prd.cec.lab.emc.com"
 
 RSS_ALL = "https://%s/view/entrypoints/job/%s-ondemand-pipeline-vxrail-build/rssAll"
-URL = "osj-vxr-01-prd.cec.lab.emc.com"
+RSS_FAIL = "https://%s/view/entrypoints/job/%s-ondemand-pipeline-vxrail-build/rssFailed"
+
 
 def get_url(release_name: str) -> str:
     
@@ -16,12 +21,13 @@ def prase_to_jenkins_object():
     pass
 
 def parse_jenkins_content(content: str):
-    pass
-    # parse different build
     
-        
-
-
+    soup = BeautifulSoup(content, 'lxml')
+    print(soup.feed)        
+    for i, child in enumerate(soup.feed.children):
+        print("--------")
+        print(i, child)
+        print("+++++++++")
 
 def update_failed_build():
     RSS_FAIL = "https://%s/view/entrypoints/job/%s-ondemand-pipeline-vxrail-build/rssFailed"
