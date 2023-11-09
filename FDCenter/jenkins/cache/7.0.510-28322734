@@ -1,0 +1,195 @@
+{
+    "_id": "7.0.510-28322734",
+    "build": "28322734",
+    "artifacts": "http://rduvxrbldprd001.isus.emc.com/apps/vxbuild/marvin_builds/official/7.0.510-28322734",
+    "version": "7.0.510",
+    "ovaSigned": true,
+    "stored": true,
+    "buildtype": "official",
+    "marvin": {
+        "repo": "git@eos2git.cec.lab.emc.com:vxrail/marvin",
+        "branch": "refs/heads/rel/vxrail-berwick",
+        "commit": "49b7eda22ec7121309a093c0ae73f44f7eef29e1",
+        "build": "28322734",
+        "requestor": {
+            "id": "timer",
+            "name": "Timer Trigger",
+            "email": ""
+        },
+        "buildurl": "https://osj-vxr-01-prd.cec.lab.emc.com/job/common-pipeline-vxrail-marvin-build/10344/",
+        "buildtime": "2023-11-07T13:43:35Z",
+        "suseurls": [
+            {
+                "url": "http://suserepo.odc-vxrail-deep-prod-dur.k8s.cec.lab.emc.com/sles15sp4_20231106084022/",
+                "priority": "50"
+            }
+        ],
+        "ovarepo": "git@eos2git.cec.lab.emc.com:vxrail/vxrail-ova-configuration",
+        "ovabranch": "rel/vxrail-berwick"
+    },
+    "lcm": {
+        "repo": "git@eos2git.cec.lab.emc.com:vxrail/lcm",
+        "branch": "refs/heads/rel/vxrail-berwick",
+        "commit": "084a71fe6619f597ae37bcdb21eb5e9068b2d904",
+        "build": "28322734",
+        "requestor": {
+            "id": "timer",
+            "name": "Timer Trigger",
+            "email": ""
+        },
+        "buildurl": "https://osj-vxr-01-prd.cec.lab.emc.com/job/common-pipeline-vxrail-lcm-rpm-build/11417/",
+        "buildtime": "2023-11-07T13:39:33Z"
+    },
+    "infra": {
+        "_id": "",
+        "branch": "",
+        "commit": "",
+        "package": "Infra",
+        "type": "",
+        "components": {
+            "infra/basic/base-runtime": {
+                "tag": "1.4.60"
+            },
+            "infra/gcr.io/etcd-development/etcd": {
+                "tag": "1.21.2"
+            },
+            "infra/infra-config-service": {
+                "tag": "1.21.2"
+            },
+            "infra/infra-lock-service": {
+                "tag": "1.21.2"
+            },
+            "infra/logging": {
+                "tag": "1.21.2"
+            },
+            "infra/nginx_config": {
+                "tag": "1.21.2"
+            },
+            "infra/nginx_gateway_vxrail": {
+                "tag": "1.21.2"
+            },
+            "infra/redis": {
+                "tag": "1.21.2"
+            },
+            "infra/tracing": {
+                "tag": "1.21.2"
+            }
+        },
+        "stored": false
+    },
+    "micronano": {
+        "_id": "",
+        "branch": "",
+        "commit": "",
+        "package": "Micronano",
+        "type": "",
+        "components": {
+            "do-main/do-cluster": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-ecosystem": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-eservices": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-host": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-kgs": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-network": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-serviceability": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-storage": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-vm": {
+                "tag": "1.21.2"
+            },
+            "do-main/do-vxrail-system": {
+                "tag": "1.21.2"
+            },
+            "do-main/property-collector": {
+                "tag": "1.21.2"
+            },
+            "infra/workflow_engine": {
+                "tag": "1.21.1"
+            },
+            "microservice/auth-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/cms-service": {
+                "tag": "1.21.2"
+            },
+            "microservice/compute-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/dell-ese": {
+                "tag": "4.7.7.21"
+            },
+            "microservice/event-history-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/event-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/hsm": {
+                "tag": "1.21.1"
+            },
+            "microservice/i2e": {
+                "tag": "1.21.1"
+            },
+            "microservice/kgs-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/lockbox": {
+                "tag": "1.21.1"
+            },
+            "microservice/ms-day1-bringup": {
+                "tag": "1.21.5"
+            },
+            "microservice/ms-day2": {
+                "tag": "1.21.3"
+            },
+            "microservice/nano-service": {
+                "tag": "1.21.4"
+            },
+            "microservice/nim-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/node-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/patch-upgrade-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/rcs-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/storage-config-service": {
+                "tag": "1.21.3"
+            },
+            "microservice/storage-ops-service": {
+                "tag": "1.21.4"
+            },
+            "microservice/storage-service": {
+                "tag": "1.21.3"
+            },
+            "microservice/vclcm-service": {
+                "tag": "1.21.1"
+            },
+            "microservice/vlcm": {
+                "tag": "1.21.1"
+            },
+            "microservice/vxdoctor-service": {
+                "tag": "1.21.1"
+            }
+        },
+        "stored": false
+    }
+}
