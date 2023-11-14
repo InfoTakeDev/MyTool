@@ -1,8 +1,0 @@
-,Unnamed: 0,Unnamed: 1,CODE,RUNTIME,DOCKER,Java Runtime,K8S,TOTAL
-0,,FAIL,19.0,0.0,0.0,0.0,0.0,19.0
-1,,PASS,38.0,0.0,0.0,0.0,0.0,38.0
-2,,TOTAL,57.0,0.0,0.0,0.0,0.0,57.0
-3,VxRail Open Source Software Scan Summary,,,,,,,
-4,SUSE Enterprise,,,,,,,
-5,Golden Image,,,,,,,
-6,GIT REPOS,berwick--[https://eos2git.cec.lab.emc.com/vxrail/vxrail-client/archive/refs/heads/release/v3.23.0.zip],,,,,,
