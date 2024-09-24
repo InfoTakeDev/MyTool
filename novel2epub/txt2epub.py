@@ -174,5 +174,5 @@ if __name__ == '__main__':
     for file in files:
         src_file = f"{txt_folder}/{file}"
         output_folder =  "/home/bart/workspace/MyTool/novel2epub/無敵六皇子_epub"
-        title = src_file.split('/')[-1]
+        title = src_file.split('/')[-1].split(".txt")[0]
         genToEpub(src_file, output_folder, title)
