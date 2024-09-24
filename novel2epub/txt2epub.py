@@ -4,7 +4,7 @@
 import pathlib
 #import uuid
 import os
-
+import sys
 # import langdetect
 from ebooklib import epub
 
@@ -69,6 +69,8 @@ class Txt2Epub:
 
 def toBig5(from_file: str, out_file: str):
     from opencc import OpenCC
+
+    all_text = ""
     with open(from_file, 'r') as f:
         content = f.readlines()
         for line in content:
@@ -81,18 +83,80 @@ def toBig5(from_file: str, out_file: str):
         f.write(all_text)
 
 
+def genTxt(filename: str, foldername: str):
+    
+    all_text = ""
+    
+    with open(f'{filename}', 'r') as f:
+        content = f.readlines()
+        for line in content:
+            all_text += line
+
+    if not os.path.exists(foldername):
+        os.mkdir(foldername)   
+
+    content = ""
+    ch_count = 0
+    book_count = 1
+    for line in all_text.split('\n'):
+        line = line.strip()
+        if line.startswith('第') and '章' in line:
+            
+            ch_count += 1
+
+            if content and ch_count == 51:
+                with open(f'{foldername}/book {book_count}.txt', 'w') as f:
+                    f.write(content + '\n')
+                    book_count += 1
+                
+                ch_count = 0
+                content = ""
+            
+        content += line + '\n'
+
+    if content:
+        with open(f'{foldername}/book {book_count}.txt', 'w') as f:
+            f.write(content + '\n') 
+
+
+def genToEpub(txt_filename: str, epub_filename: str, book_title: str):
+    
+    source_file = f"{txt_filename}"
+    with open(source_file, 'r') as f:
+        content = f.readlines()
+        for line in content:
+            if line.startswith('第') and '章' in line:
+                if old_chapter:
+                    chapters[old_chapter] = chapter_content
+                old_chapter = line
+                chapter_content = ""
+            else:
+                chapter_content += line
+
+    if old_chapter:
+        chapters[old_chapter] = chapter_content
+    
+    if not os.path.exists(epub_folder):
+        os.mkdir(epub_folder) 
+
+    t2e = Txt2Epub(filename, filename, "bart")
+    t2e.create_epub(book_title, epub_filename, chapters)
+
+
+
 if __name__ == '__main__':
     all_text = ""
-    form_name = '無敵六皇子.txt'
-    name =  '無敵六皇子_big5.txt'
-    name = form_name.split('.txt')[0]
+    original_name = '無敵六皇子.txt'
+    big5_name =  '無敵六皇子_big5.txt'
+    name = original_name.split('.txt')[0]
+    
     txt_folder = f'{name}_txt'
     epub_folder = f'{name}_epub'
 
-    #toBig5(form_name, '無敵六皇子.txt')
+    # toBig5(original_name, big5_name)
 
-    if not os.path.exists(txt_folder):
-        os.mkdir(txt_folder)   
+    # genTxt(big5_name, txt_folder)
+    
 
     content = ""
     ch_count = 0
@@ -100,27 +164,8 @@ if __name__ == '__main__':
     chapters = {}
     chapter_content = ""
     old_chapter = ""
-    # for line in all_text.split('\n'):
-    #     line = line.strip()
-    #     if line.startswith('第') and '章' in line:
-            
-    #         ch_count += 1
-
-    #         if content and ch_count == 51:
-    #             with open(f'{txt_folder}/book {book_count}.txt', 'w') as f:
-    #                 f.write(content + '\n')
-    #                 book_count += 1
-                
-    #             ch_count = 0
-    #             content = ""
-            
-    #     content += line + '\n'
-
-    # if content:
-    #     with open(f'{txt_folder}/book {book_count}.txt', 'w') as f:
-    #         f.write(content + '\n') 
-
-    # read from txt file
+    
+    idx = 1
     filename = "book 1"
     filename_txt = f"book 1.txt"
     filename_epub = f"book 1.epub"
