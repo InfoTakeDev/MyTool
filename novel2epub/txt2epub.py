@@ -138,7 +138,7 @@ def genToEpub(src_filename: str, output_folder:str ,book_title: str):
                 old_chapter = line
                 chapter_content = ""
             else:
-                chapter_content += line
+                chapter_content += line + "<br/>"
 
     if old_chapter:
         chapters[old_chapter] = chapter_content
